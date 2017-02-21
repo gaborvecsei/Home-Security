@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Security</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<div class="form-style-6">
+    <h1> Login and Start Home Security </h1><br>
+    <form action="home_security" method="POST">
+        Email:<br>
+        <input type="text" name="email" placeholder="Your Email">
+        <br>
+        Password:<br>
+        <input type="password" name="password">
+        <br><br>
+        Minimum detection area:<br>
+        <input type="number" name="min_detection_area" value="5000">
+        <br><br>
+        <input type="submit" value="Submit">
+        <br><br>
+        <input type="radio" name="app_status" value="start">Start<br>
+        <input type="radio" name="app_status" value="stop" checked="checked">Stop<br>
+        <br><br>
+        <i>Created by Gábor Vecsei</i>
+    </form>
+</div>
+
+</body>
+</html>

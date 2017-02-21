@@ -1,0 +1,10 @@
+*.jpg
+*.png
+.idea
+*.jpeg
+*.pyc
+test.py
+tmp
+config.ini
+!images/*.jpg
+!images/*.png
