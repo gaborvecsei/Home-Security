@@ -3,7 +3,7 @@ import threading
 
 
 class MotionDetector(object):
-    def __init__(self, min_detection_area=100, kernel=(31, 31), sigma=0, backgroundImage=None, refresh=False,
+    def __init__(self, min_detection_area=100, kernel=(31, 31), sigma=0, background_image=None, refresh=False,
                  refresh_time=5):
         self.min_detection_area = min_detection_area
         k1, k2 = kernel
@@ -14,8 +14,8 @@ class MotionDetector(object):
         self.kernel = (k1, k2)
         self.sigma = sigma
 
-        self.prevImage = backgroundImage
-        self.originalImage = None
+        self.prevImage = background_image
+        self.original_image = None
 
         self.refresh_time = refresh_time
 
@@ -43,18 +43,18 @@ class MotionDetector(object):
         cnts = sorted(cnts, key=cv2.contourArea, reverse=True)
 
         if len(cnts) < 1:
-            isDetected = False
+            is_detected = False
             contour = None
         else:
             largest_contour = cnts[0]
             if cv2.contourArea(largest_contour) < self.min_detection_area:
-                isDetected = False
+                is_detected = False
                 contour = None
             else:
-                isDetected = True
+                is_detected = True
                 contour = largest_contour
                 self.prevImage = blurred
-        return isDetected, contour
+        return is_detected, contour
 
     def change_min_detection_area(self, min_area):
         self.min_detection_area = min_area
