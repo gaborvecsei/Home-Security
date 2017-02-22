@@ -65,6 +65,14 @@ class HomeSecurity:
                 x, y, w, h = cv2.boundingRect(contour)
                 cv2.rectangle(debug_frame, (x, y), (x + w, y + h), (0, 255, 0), 1)
 
+                """*********************************
+                *
+                *       INSERT YOUR CODE HERE
+                *
+                * If you would like to use your own methods
+                * (send email, play alarm sound, etc...), than call it here
+                *********************************"""
+                
                 image_name = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S-%f") + ".jpg"
                 self.firebase.store_image(image_name, debug_frame)
         print("Detection ended!")
