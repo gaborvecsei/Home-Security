@@ -55,6 +55,26 @@ Go to `192.168.0.12:5000/login` or navigate there from the homepage and you can 
 
 --------------------------
 
+## Extend Home Security
+
+If you would like to make other things happen when it detects motion than you can edit
+`home_security.py` which you can find at:
+
+```
+HomeSecurityModules/
+    HomeSecurity/
+        home_security.py
+        __init__.py
+```
+
+For example you can create a method which not just uploads the image to the Firebase project storage,
+but it sends you a message, email, notification.
+
+I provided a simple notification class with *Slack*. This sends you a message after motion is detected. You only have to
+install the `slackclient` package and put the necessary code to `home_security.py`.
+
+--------------------------
+
 ## Images
 
 <img  height=350 src="https://github.com/gaborvecsei/Motion-Detector/blob/master/images/index_page.jpg" />

@@ -60,7 +60,8 @@ class HomeSecurity:
                 area_percentage = (contour_area / frame_area) * 100
                 if area_percentage > 80:
                     continue
-                print("Detected with area: {0:.2f} and image percentage: {1:.2f}%".format(contour_area, area_percentage))
+                print(
+                    "Detected with area: {0:.2f} and image percentage: {1:.2f}%".format(contour_area, area_percentage))
 
                 x, y, w, h = cv2.boundingRect(contour)
                 cv2.rectangle(debug_frame, (x, y), (x + w, y + h), (0, 255, 0), 1)
