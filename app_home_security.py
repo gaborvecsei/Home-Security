@@ -15,9 +15,9 @@ import configparser
 
 from flask import Flask, render_template, request
 
-from HomeSecurityModules.Firebase import Firebase
-from HomeSecurityModules.HomeSecurity import HomeSecurity, STATUS_STOPPED, STATUS_RUNNING
-from HomeSecurityModules.MotionDetector import MotionDetector
+from HomeSecurityModules import Firebase
+from HomeSecurityModules import HomeSecurity, STATUS_STOPPED, STATUS_RUNNING
+from HomeSecurityModules import MotionDetector
 
 app = Flask(__name__)
 
