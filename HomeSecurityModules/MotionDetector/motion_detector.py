@@ -1,5 +1,6 @@
-import cv2
 import threading
+
+import cv2
 
 
 class MotionDetector(object):
@@ -30,6 +31,7 @@ class MotionDetector(object):
         gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         gray_image = cv2.equalizeHist(gray_image)
         blurred = cv2.GaussianBlur(gray_image, self.kernel, self.sigma)
+
         if self.prevImage is None:
             self.prevImage = blurred
         diff = cv2.absdiff(self.prevImage, blurred)
