@@ -82,7 +82,9 @@ install the `slackclient` package and put the necessary code to `home_security.p
 Here you can see the main steps of the motion detector. You can real more about this part at [this blog post](https://gaborvecsei.wordpress.com/2017/03/07/home-security-system-with-computer-vision/)
 
 <img  width=400 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/preprocessing.jpg" />
-<img  width=400 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/previous_image.jpg" />
+
+<img  width=200 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/previous_image.jpg" />
+
 <img  width=400 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/difference_binary.jpg" />
 
 --------------------------
