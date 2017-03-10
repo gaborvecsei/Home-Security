@@ -29,6 +29,9 @@ We need to setup a Firebase project. This is a simple way to authenticate users 
     2. Add users (for yourself, your mom, dad, etc...) - They will be able to start or stop the security system
 4. Save `apiKey, authDomain, databaseURL, storageBucket, messagingSenderId` and fill out `config.ini`
 
+<img  height=250 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/create_firebase_project.jpg" />
+<img  height=250 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/firebase_authentication.jpg" />
+
 ### Install
 
 You can use Anaconda to simplify the steps
@@ -54,6 +57,10 @@ Go to `192.168.0.12:5000/login` or navigate there from the homepage and you can 
 * Enter your *email* and *password*
 * Enter the *minimum detection area* (the smaller the value the more it is sensitive for movements, changes on the captured image)
 * Choose to *start* or *stop* the system
+
+If the System detects movement it will snap a picture and upload to your Firebase project.
+
+<img  height=250 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/firebase_storage.jpg" />
 
 --------------------------
 
@@ -93,6 +100,8 @@ Here you can see the main steps of the motion detector. You can read more about 
 
 <img  height=350 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/index_page.jpg" />
 <img  height=350 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/login_form.jpg" />
+
+<img  height=350 src="https://github.com/gaborvecsei/Home-Security/blob/master/images/raspberry_pi.jpg" />
 
 --------------------------
 
