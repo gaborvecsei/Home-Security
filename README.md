@@ -36,7 +36,7 @@ We need to setup a Firebase project. This is a simple way to authenticate users 
 
 You can use Anaconda to simplify the steps
 
-- Python 3.5
+- Python 3 (but it works with Python 2 too)
 - [OpenCV 3 (better) or OpenCV 2](http://opencv.org/)
 - [Pyrebase](https://github.com/thisbejim/Pyrebase) - `pip install pyrebase`
 - Flask - `pip install flask`
