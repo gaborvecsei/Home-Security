@@ -5,6 +5,6 @@
 *.pyc
 test.py
 tmp
-config.ini
+my_config.ini
 !images/*.jpg
 !images/*.png
