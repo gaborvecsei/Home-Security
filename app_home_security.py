@@ -11,7 +11,10 @@
  *****************************************************
 """
 
-import configparser
+try:
+	import configparser
+except ImportError as e:
+	import ConfigParser as configparser
 
 from flask import Flask, render_template, request
 
@@ -22,7 +25,7 @@ from HomeSecurityModules import MotionDetector
 app = Flask(__name__)
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('my_config.ini')
 
 api_key = config.get("Firebase", "apiKey")
 auth_domain = config.get("Firebase", "authDomain")
